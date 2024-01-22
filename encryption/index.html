@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加密算法</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+  <script src="https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-beta.1/jsencrypt.js"></script>
+  <script src="./index.js"></script>
+  <script src="./js/Base64.js"></script>
+  <script src="./js/MD5.js"></script>
+  <script src="./js/SHA1.js"></script>
+  <script src="./js/HMAC.js"></script>
+  <script src="./js/AES.js"></script>
+  <script src="./js/DES.js"></script>
+  <script src="./js/RSA.js"></script>
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="select">
+      请选择：
+      <select name="category" id="categorySelect">
+        <option value="1">Base64编码</option>
+        <option value="2">MD5加密</option>
+        <option value="3">安全哈希算法SHA1</option>
+        <option value="4">散列消息鉴别码HMAC</option>
+        <option value="5">AES加密</option>
+        <option value="6">DES加密</option>
+        <option value="7">RSA加密</option>
+      </select>
+    </div>
+    <div class="content">
+      <div id="content_base64">
+        <p>BASE64编码：</p>
+        <p>
+          <span class="content_desc">输入字符串：</span>
+            <textarea name="" id="baseText" cols="30" rows="10"></textarea>
+          <span class="content_desc">加密字符串：</span><textarea name="" id="baseKey" cols="30" rows="10"></textarea>
+        </p>
+        <button onclick="baseEncrypted()">加密</button>
+        <button onclick="baseDecrypted()">解密</button>
+      </div>
+
+      <div id="content_md5">
+        <p>MD5加密：</p>
+        <p>
+          <span class="content_desc">输入字符串：</span>
+            <textarea name="" id="mdText" cols="30" rows="10"></textarea>
+          <span class="content_desc">加密字符串：</span><textarea name="" id="mdKey" cols="30" rows="10"></textarea>
+        </p>
+        <button onclick="mdEncrypted()">加密</button>
+      </div>
+
+      <div id="content_sh">
+        <p>SHA1加密：</p>
+        <p>
+          <span class="content_desc">输入字符串：</span>
+            <textarea name="" id="shText" cols="30" rows="10"></textarea>
+          <span class="content_desc">加密字符串：</span><textarea name="" id="shKey" cols="30" rows="10"></textarea>
+        </p>
+        <button onclick="shEncrypted()">加密</button>
+      </div>
+
+      <div id="content_hmac">
+        <p>HMAC加密：</p>
+        <p>
+          <span class="content_desc">输入字符串：</span>
+            <textarea name="" id="hmacText" cols="30" rows="10"></textarea>
+          <span class="content_desc">加密字符串：</span><textarea name="" id="hmacKey" cols="30" rows="10"></textarea>
+        </p>
+        <button onclick="hmacEncrypted()">加密</button>
+      </div>
+
+      <div id="content_aes">
+        <p>AES对称加密：</p>
+        <p>
+          <span class="content_desc">输入字符串：</span>
+            <textarea name="" id="aesText" cols="30" rows="10"></textarea>
+          <span class="content_desc">加密字符串：</span><textarea name="" id="aesKey" cols="30" rows="10"></textarea>
+        </p>
+        <button onclick="aesEncrypted()">加密</button>
+        <button onclick="aesDecrypted()">解密</button>
+      </div>
+
+      <div id="content_des">
+        <p>DES对称加密：</p>
+        <p>
+          <span class="content_desc">输入字符串：</span>
+            <textarea name="" id="desText" cols="30" rows="10"></textarea>
+          <span class="content_desc">加密字符串：</span><textarea name="" id="desKey" cols="30" rows="10"></textarea>
+        </p>
+        <button onclick="desEncrypted()">加密</button>
+        <button onclick="desDecrypted()">解密</button>
+      </div>
+
+      <div id="content_rsa">
+        <p>RES非对称加密：</p>
+        <p>
+          <span class="content_desc">输入字符串：</span>
+            <textarea name="" id="rsaText" cols="30" rows="10"></textarea>
+          <span class="content_desc">加密字符串：</span><textarea name="" id="rsaKey" cols="30" rows="10"></textarea>
+        </p>
+        <button onclick="rsaEncrypted()">加密</button>
+        <button onclick="rsaDecrypted()">解密</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
